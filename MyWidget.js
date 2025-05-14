@@ -77,8 +77,9 @@ function(UWA, DnD, WAFData, i3DXCompass) {
 
   function processDrop(objects) {
     droppedDocs = [];
-
+	console.log("Dropped objects:", objects);
     const docObjects = objects.filter(obj => obj.protocol === 'ds' && obj.objectId);
+	console.log("Filtered Document Objects:", docObjects);
     if (docObjects.length !== 2) {
       alert('Please drop exactly two documents.');
       return;
